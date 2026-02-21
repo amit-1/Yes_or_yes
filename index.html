@@ -1,2 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yes or No</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-a
+    <h1>Yes or No?</h1>
+    <button onclick="generateAnswer()">Ask</button>
+    <div id="result"></div>
+
+    <script>
+        function generateAnswer() {
+            const answers = ["Yes", "No"];
+            const randomIndex = Math.floor(Math.random() * answers.length);
+            document.getElementById("result").innerText = answers[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
